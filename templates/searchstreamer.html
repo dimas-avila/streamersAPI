@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+       ¿De quién quieres saber los datos?
+    </h1>
+
+    <form action="/api/searchstreamer" method="post" id="searchform">
+
+        <label for="name">Streamer name: </label><br>
+        <input type="text" id="name" name="name" value="Rubius"><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <table id="streamer">
+        <tr>
+            <th>Name</th>
+            <th>Subs</th>
+            <th>Followers</th>
+        </tr>
+        <tr>
+            <td id="nombre"></td>
+            <td id="subs"></td>
+            <td id="followers"></td>
+        </tr>
+    </table>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

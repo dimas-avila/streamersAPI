@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Añade un nuevo streamer
+    </h1>
+
+    <form action="/api/addstreamer" method="post">
+
+        <label for="name">Streamer name: </label><br>
+        <input type="text" id="name" name="name" value="Rubius"><br>
+
+        <label for="subs">Subs: </label><br>
+        <input type="text" id="subs" name="subs" value="0"><br>
+
+        <label for="followers">Followers</label><br>
+        <input type="text" id="followers" name="followers" value="0"><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <table id="streamers">
+        <tr>
+            <th>Nombre</th>
+            <th>Subs</th>
+            <th>Followers</th>
+        </tr>
+        {% for streamer in streamers %}
+        <tr>
+            <td>
+                {{ streamer.name }}
+            </td>
+            <td>
+                {{ streamer.subs }}
+            </td>
+            <td>
+                {{ streamer.followers }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    
+</body>
+</html>
